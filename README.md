@@ -20,8 +20,7 @@
 - Terceiro passo
 
 - Baixe o projeto que é o backend interligado com esse projeto de frontend, e siga `primeiramente`, todos os passos que estão descritos no `README`, do projeto.
-- [Projeto Backend]
-(https://github.com/macmiller87/Projeto-Gerenciador-Registros-Fullstack-Parte-Backend)
+- [Projeto Backend](https://github.com/macmiller87/Projeto-Gerenciador-Registros-Fullstack-Parte-Backend)
 
 - Quarto Passo
 
