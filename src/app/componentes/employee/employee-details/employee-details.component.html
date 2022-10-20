@@ -1,0 +1,39 @@
+<div class="container custom-container2">
+  <div class="col-md-12">
+      <h4 class="paraghp">{{ tituloComp }}</h4>
+      <div *ngIf="lerDados">
+        <!-- <div>
+          <label><span>Nome:</span></label>{{ " " + lerDados.name }}
+        </div>
+        <div>
+          <label><span>Email:</span></label>{{ " " + lerDados.email }}
+        </div>
+        <div>
+          <label><span>Telefone:</span></label>{{ " " + lerDados.phone }}
+        </div> -->
+        <table class= "table table-bordered">
+          <thead>
+            <tr>
+              <th class= "thtable">Name</th>
+              <th class= "thtable">Department</th>
+              <th class= "thtable">Hiring Date</th>
+              <th class= "thtable">Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor= "let datas of lerDados">
+              <td class="datas">{{ datas.name }}</td>
+              <td class="datas">{{ datas.department }}</td>
+              <td class="datas">{{ datas.hiringDate }}</td>
+              <td>
+                <button type= "button" class= "btn btn-outline-info btn-sm" style="background-color: blue;" (click)= "retornaLista()">Back to List</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+<!-- <div class="buttonDetails">
+  <button (click)= "retornaLista()" class="btn btn-primary">Voltar para Lista</button>
+</div> -->

@@ -1,0 +1,40 @@
+<div class= "container custom-container2">
+  <div class= "col-md-12">
+    <h4 class="paraghp" >{{ tituloComp }}</h4>
+    <div *ngIf= "listaColaboradores != 0; else listaSemDados">
+
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <th class= "thtable" >Id Employeer</th>
+            <th class= "thtable" >Name</th>
+            <th class= "thtable" >Department</th>
+            <th class= "thtable" >Hiring Date</th>
+            <th class= "thtable">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let dados of listaColaboradores">
+            <td class="datas">{{ dados.id }}</td>
+            <td class="datas">{{ dados.name }}</td>
+            <td class="datas">{{ dados.department }}</td>
+            <td class="datas">{{ dados.hiringDate }}</td>
+            <button type="button" class= "btn btn-outline-info btn-sm" routerLink= "/employee-details/{{ dados.id }}">Details</button>
+            <button type="button" class= "btn btn-outline-info btn-sm" routerLink= "/employee-edit/{{ dados.id }}">Edit</button>
+            <button type="button" class= "btn btn-outline-danger btn-sm" (click)= "excluirColaborador(dados.id)">Delete</button>
+            <button type="button" class= "btn btn-outline-info btn-sm" routerLink= "/employee-create">Create</button>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+    <ng-template #listaSemDados>
+      <div class= "no-data text-center">
+        <p>Ainda não há registro... Crie!... clique no botão abaixo.</p>
+        <button class= "btn btn-outline-primary" routerLink= "/employee-create">Criar Registro</button>
+      </div>
+    </ng-template>
+
+</div>

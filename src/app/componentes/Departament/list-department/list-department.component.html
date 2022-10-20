@@ -1,0 +1,37 @@
+<div class= "container custom-container2">
+  <div class= "col-md-12">
+    <h4 class="paraghp">{{ titleComp }}</h4>
+
+    <input type="text" class="inputFilter" placeholder="Filter department" [(ngModel)]="filter">
+    <div *ngIf= "listDepartments != 0; else listaSemDados">
+
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <th class= "thtable">Name of Departments</th>
+            <th class= "thtable">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let datas of listDepartments | filter:filter; let i = index">
+            <td class="datas">{{ datas.nameDepartment }}</td>
+            <button type="button" class= "btn btn-outline-info btn-sm" routerLink= "/departments-details/{{ datas.id }}">Details</button>
+              <button type="button" class= "btn btn-outline-info btn-sm" routerLink= "/department-edit/{{ datas.id }}">Edit</button>
+              <button type="button" class= "btn btn-outline-danger btn-sm" (click)= "deleteDepart(datas.id)">delete</button>
+              <button type="button" class= "btn btn-outline-info btn-sm" routerLink= "/department-create">Create</button>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+    <ng-template #listaSemDados>
+      <div class= "no-data text-center">
+        <p>There's still no record... Create!... click the button below.</p>
+        <button class= "btn btn-outline-primary" routerLink= "/department-create">Create Department</button>
+      </div>
+    </ng-template>
+</div>
+
+

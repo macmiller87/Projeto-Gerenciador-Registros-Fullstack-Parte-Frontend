@@ -1,0 +1,17 @@
+<div class ="container custom-container">
+
+  <div class ="col-md-12">
+    <h4 class="paraghp">{{ titleComp }}</h4>
+
+    <div class ="form-group">
+      <input type="text" [(ngModel)] = "atualizarDados.nameDepartment" style="text-align: center" class ="form-control">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class ="btn btn-success btn-large btn-block" (click)= "atualizandoDado()">Save Registry</button>
+      <button type = "button" class ="btn btn-success btn-large btn-block" style="background-color: blue;" routerLink="/departments-list">Back to List</button>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,90 @@
+body {
+  background-color: rgb(107, 81, 132)
+}
+
+.custom-container {
+  max-width: 500px;
+}
+
+.custom-container-2 {
+  max-width: 800px;
+}
+
+.table-bordered td {
+  font-size: 14px;
+  background-color: rgb(148, 150, 217)
+}
+
+.edit {
+  margin-right: 10px;
+}
+
+.edit,
+.delete {
+  cursor: pointer;
+  display: inline-block;
+  color: blue
+}
+
+.no-data {
+  padding-top: 50px;
+}
+
+.no-data p {
+  font-size: 27px;
+  color: rgba(0, 0, 0, .5);
+  letter-spacing: .2px;
+  padding-bottom: 10px;
+}
+
+nav {
+  padding: 10px;
+
+}
+
+button {
+  margin-left: 10px;
+}
+
+button {
+  position: relative;
+  margin-left: 80px;
+  align-items: center;
+  text-align: center;
+}
+
+.inputFilter{
+  background-color: aqua;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.paraghp {
+  text-align: center;
+  font-family:  'Times New Roman', Times, serif;
+}
+
+.thtable {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.datas {
+  color: black;
+  font-style: italic;
+  font-size: 80px;
+  text-align: center;
+}
+
+.selectDepart {
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+#dateSelect {
+  text-align: center;
+  margin-top: 20px;
+}
